@@ -1,3 +1,9 @@
 import streamlit as st
 
-st.write('hello world')
+st.header('st.button')
+
+if st.button('Sy hello'):
+    st.write('why hello there')
+
+else:
+    st.write('Goodby')
