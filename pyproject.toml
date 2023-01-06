@@ -8,6 +8,9 @@ packages = [{include = "30_days_streamlit"}]
 
 [tool.poetry.dependencies]
 python = "^3.9"
+numpy = "^1.24.1"
+plotly = "^5.11.0"
+streamlit = "^1.9.0"
 
 
 [build-system]
