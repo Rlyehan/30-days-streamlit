@@ -577,6 +577,14 @@ python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,>=2.7"
 six = ">=1.5"
 
 [[package]]
+name = "python-decouple"
+version = "3.6"
+description = "Strict separation of settings from code."
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "pytz"
 version = "2022.7"
 description = "World timezone definitions, modern and historical"
@@ -916,6 +924,30 @@ validators = ">=0.2"
 watchdog = {version = "*", markers = "platform_system != \"Darwin\""}
 
 [[package]]
+name = "streamlit-aggrid"
+version = "0.3.3"
+description = "Streamlit component implementation of ag-grid"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+pandas = ">=1.2"
+python-decouple = ">=3.6,<4.0"
+streamlit = ">=0.87.0"
+
+[[package]]
+name = "streamlit-option-menu"
+version = "0.3.2"
+description = "streamlit-option-menu is a simple Streamlit component that allows users to select a single item from a list of options in a menu."
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+streamlit = ">=0.63"
+
+[[package]]
 name = "streamlit-pandas-profiling"
 version = "0.1.3"
 description = "Pandas Profiling component for Streamlit."
@@ -937,6 +969,17 @@ python-versions = ">=3.6"
 
 [package.dependencies]
 shap = ">=0.4.0"
+
+[[package]]
+name = "streamlit-tags"
+version = "1.2.8"
+description = "Tags custom component for Streamlit"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+streamlit = ">=0.63"
 
 [[package]]
 name = "tangled-up-in-unicode"
@@ -1157,7 +1200,7 @@ testing = ["flake8 (<5)", "func-timeout", "jaraco.functools", "jaraco.itertools"
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.9,<3.11"
-content-hash = "a3c2644bcf502f50c7241892f4d5794562b474b8681be5733da28612e57b486c"
+content-hash = "168210a680c40ce4ea512423fc388f132e3e7bd2c66b2f4ee2bd48d3051de5f5"
 
 [metadata.files]
 altair = [
@@ -1852,6 +1895,10 @@ python-dateutil = [
     {file = "python-dateutil-2.8.2.tar.gz", hash = "sha256:0123cacc1627ae19ddf3c27a5de5bd67ee4586fbdd6440d9748f8abb483d3e86"},
     {file = "python_dateutil-2.8.2-py2.py3-none-any.whl", hash = "sha256:961d03dc3453ebbc59dbdea9e4e11c5651520a876d0f4db161e8674aae935da9"},
 ]
+python-decouple = [
+    {file = "python-decouple-3.6.tar.gz", hash = "sha256:2838cdf77a5cf127d7e8b339ce14c25bceb3af3e674e039d4901ba16359968c7"},
+    {file = "python_decouple-3.6-py3-none-any.whl", hash = "sha256:6cf502dc963a5c642ea5ead069847df3d916a6420cad5599185de6bab11d8c2e"},
+]
 pytz = [
     {file = "pytz-2022.7-py2.py3-none-any.whl", hash = "sha256:93007def75ae22f7cd991c84e02d434876818661f8df9ad5df9e950ff4e52cfd"},
     {file = "pytz-2022.7.tar.gz", hash = "sha256:7ccfae7b4b2c067464a6733c6261673fdb8fd1be905460396b97a073e9fa683a"},
@@ -2146,6 +2193,14 @@ streamlit = [
     {file = "streamlit-1.12.0-py2.py3-none-any.whl", hash = "sha256:19f58ae723afaedbc85891c3a159e9576343609036713ecbb73b219a47dfe48d"},
     {file = "streamlit-1.12.0.tar.gz", hash = "sha256:1bbb406d4eee9acb055e72627212e9f04eea8ef0332f8dfeb6745bdf256c168b"},
 ]
+streamlit-aggrid = [
+    {file = "streamlit-aggrid-0.3.3.tar.gz", hash = "sha256:d96edb102df98450f3b6bcf5a52b64e6ceef9678e82e2dba9cfef074e7f134ab"},
+    {file = "streamlit_aggrid-0.3.3-py3-none-any.whl", hash = "sha256:c5202347b1257c4246ef3541b233866f57bc930b97040be58b059093c4fee22e"},
+]
+streamlit-option-menu = [
+    {file = "streamlit-option-menu-0.3.2.tar.gz", hash = "sha256:69d1aef6f30f83f29eda3dc9667733bc2e28cd640eb17b4b6ca315f633484c52"},
+    {file = "streamlit_option_menu-0.3.2-py3-none-any.whl", hash = "sha256:0b7eae3ffdb0276c81d15750465c72957d57d2f766cb027c586d053519731178"},
+]
 streamlit-pandas-profiling = [
     {file = "streamlit_pandas_profiling-0.1.3-py3-none-any.whl", hash = "sha256:826dcef1dc8d4882bec645f0a3b70c70ff20cc31ae90200445392155607493e3"},
     {file = "streamlit_pandas_profiling-0.1.3.tar.gz", hash = "sha256:6719cf2cfd682b59470d90aa09b4529a6622d915cef4faa3e88f85c00b7faf79"},
@@ -2153,6 +2208,10 @@ streamlit-pandas-profiling = [
 streamlit-shap = [
     {file = "streamlit-shap-1.0.2.tar.gz", hash = "sha256:d48d4b0ee54c8576cc942949e18416b288bd6ac791051cc55345fe125fec1ab3"},
     {file = "streamlit_shap-1.0.2-py3-none-any.whl", hash = "sha256:1762aca13393bab8a98eececd07985d9f9ab53b8866d48fb81186ce123bde7d2"},
+]
+streamlit-tags = [
+    {file = "streamlit_tags-1.2.8-py3-none-any.whl", hash = "sha256:c71b10666f3fce67d8e0b3c089aa50dc48830d310223fb88005b08f157586f95"},
+    {file = "streamlit_tags-1.2.8.tar.gz", hash = "sha256:9ea46b21f206dc73164e59e3c800a96c863c90af57afde20115f001a6d986583"},
 ]
 tangled-up-in-unicode = [
     {file = "tangled_up_in_unicode-0.2.0-py3-none-any.whl", hash = "sha256:154be12605b1687a17133aa741ae951cf9ee531c48a0c19f98d83ec5cb3cc7be"},
